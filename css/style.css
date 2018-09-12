@@ -1,0 +1,28 @@
+body {
+    background-color: #CCCCCC;
+}
+
+.card-img-top {
+
+}
+
+#about {
+  background-color:#EEEEEE;
+}
+
+#portfolio {
+  background-color:#DDDDDD;
+}
+
+#contact {
+  background-color:#DDDDDD;
+}
+
+#contact a {
+  font-size: 5em;
+}
+
+.footer {
+  background-color:#AAAAAA;
+  color:#EEEEEE;
+}
