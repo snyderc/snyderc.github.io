@@ -4,6 +4,7 @@ body {
 
 #about {
   background-color:#EEEEEE;
+  padding: 0 20%;
 }
 
 #portfolio {
@@ -17,6 +18,7 @@ body {
 #contact a {
   font-size: 5em;
 }
+
 
 .footer {
   background-color:#AAAAAA;
