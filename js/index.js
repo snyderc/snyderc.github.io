@@ -14,12 +14,11 @@ $(document).ready(function () {
         $(this).addClass('active');
       
         var target = this.hash,
-            menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
+            'scrollTop': $target.offset().top - 50
         }, 500, 'swing', function () {
-            window.location.hash = target;
+            // window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
     });
@@ -30,7 +29,7 @@ function onScroll(event){
     $('#navbarNav a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top -50 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#navbarNav div a').removeClass("active");
             currLink.addClass("active");
         }
