@@ -1,5 +1,5 @@
 body {
-    background-color: #CCCCCC;
+  background-color: #CCCCCC;
 }
 
 #about {
@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
   width: 100%;
 }
 
