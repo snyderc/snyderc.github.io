@@ -10,9 +10,9 @@ Drop me a note at hello@snyderc.me
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Chris Snyder, Developer</title>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Chris Snyder, Full-Stack Developer</title>
+  <link rel='stylesheet prefetch' href='//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@ Drop me a note at hello@snyderc.me
   <div class="container py-4" id="top">
     <div class="row text-center">
       <div class="col-lg-8 my-auto">
-        <p class="lead">Self-taught developer who likes to make users' lives easier.</p>
+        <p class="lead">Self-taught full-stack developer who likes to make users' lives easier.</p>
         <hr>
         <p>Also good at project managing and detail-ferreting.</p>
         <p><a href="mailto:hello@snyderc.me">hello@snyderc.me</a> | <a href="http://github.com/snyderc">GitHub</a> | <a href="files/ChristopherSnyderResume.pdf">Resume</a></p>
@@ -49,84 +49,94 @@ Drop me a note at hello@snyderc.me
 
   <div class="container py-4 text-center" id="portfolio">
     <h2>Portfolio</h2>
-
-    <div class="card-deck my-4">
-
-      <div class="card px-4 py-4">
-        <a href="http://www.voteremote.us"><img class="card-img-top" src="images/ballotbox_openclipart.png" alt="Card image cap"></a>
-        <div class="card-block py-4">
-          <h4 class="card-title"><a href="http://www.voteremote.us">Vote Remote</a></h4>
-          <p class="card-text">Half of college students don't vote. We're ready to change that. Tech lead for volunteer project with nonprofit Institute for Social Engagement. First version launched Sept 2018. ReactJS.</p>
-          <p><a href="http://www.voteremote.us">Visit Vote Remote</a></p>
+      <div class="card-group my-4">
+        <div class="card mx-4 px-4 py-4">
+            <a href="http://www.voteremote.us"><img class="card-img-top" src="images/voteremote.png" alt="Vote Remote logo"></a>
+            <div class="card-body py-4">
+              <h4 class="card-title"><a href="http://www.voteremote.us">Vote Remote</a></h4>
+              <p>Launched Sept 2018 for the nonprofit Institute for Social Engagement.</p>
+              <p class="card-text">As tech lead, worked with product and developer teams to define product scope and break down into technical tasks, and coded interactive features. ReactJS, Firebase.</p>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.voteremote.us">Visit Vote Remote</a>
+            </div>
+          </div>
+        <div class="card mx-4 px-4 py-4">
+          <a href="http://coast-to-coast.snyderc.me"><img class="card-img-top" src="images/coast_to_coast.png" alt="Coast to Coast screenshot"></a>
+          <div class="card-body py-4">
+              <h4 class="card-title"><a href="http://coast-to-coast.snyderc.me">Coast to Coast</a></h4>
+              <p class="card-text">Remake of an Apple IIe game that teaches mathematical order of operations. JS/HTML5 Canvas.</p>
+          </div>
+          <div class="card-footer">
+              <a href="https://github.com/snyderc/coast-to-coast">GitHub</a> | <a href="http://coast-to-coast.snyderc.me">Live Demo</a>
+          </div>
         </div>
       </div>
-
-      <div class="card px-4 py-4">
-        <a href="http://coast-to-coast.snyderc.me"><img class="card-img-top" src="images/coast_to_coast.png" alt="Card image cap"></a>
-        <div class="card-block py-4">
-          <h4 class="card-title"><a href="http://coast-to-coast.snyderc.me">Coast to Coast</a></h4>
-          <p class="card-text">Remake of an Apple IIe game that teaches mathematical order of operations. JS/HTML5 Canvas.</p>
-          <p><a href="https://github.com/snyderc/coast-to-coast">GitHub</a> | <a href="http://coast-to-coast.snyderc.me">Live Demo</a></p>
+      <div class="card-group my-4">
+        <div class="card mx-4 px-4 py-4">
+          <a href="https://github.com/snyderc/gofish"><img class="card-img-top" src="images/fish_small_openclipart.png" alt="Fish image"></a>
+          <div class="card-body py-4">
+            <h4 class="card-title"><a href="https://github.com/snyderc/gofish">Go Fish</a></h4>
+            <p class="card-text">Python command line program to play Go Fish between two human players at the same computer.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/snyderc/gofish">GitHub</a>
+          </div>
+        </div>
+        <div class="card mx-4 px-4 py-4">
+          <a href="http://conway.snyderc.me"><img class="card-img-top" src="images/conway_game_of_life.png" alt="Conway's Game of Life screenshot"></a>
+          <div class="card-body py-4">
+            <h4 class="card-title"><a href="http://conway.snyderc.me">Conway's Game of Life</a></h4>
+            <p class="card-text">ReactJS app that runs the classic cellular automaton.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/snyderc/conway-game-of-life">GitHub</a> | <a href="http://conway.snyderc.me/">Live Demo</a>
+          </div>
         </div>
       </div>
+  </div>
 
+  <div class="container px-4 py-4 text-center" id="about">
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h2 class="py-4">About Me</h2>
+        <div class="bio">
+          <p>In high school, my website was #1 on Google (for the admittedly noncompetitive keyword “miniature golf in CT”) with a few hundred unique visitors each summer day, and I was making my own simple TI-83 graphing calculator programs.</p>
+          <p>Not realizing that programming could be a career choice, I instead studied politics, learning enough to know I didn’t want to go into politics! So for the past few years, I’ve edited two books about product creation for startups, moved 20 people and 4 vacuum chambers across town, and run logistics for events keynoted by big-name Boston-area tech founders.</p>
+          <p>And along the way, I created a database to automate colleagues’ expense reporting, modified a web scraper so that I could customize how a third-party program displayed its data, and learned how to get an admin account on a WordPress site via MySQL commands. No matter where I went, I saw the power of tech.</p>
+          <p>But I never forgot the excitement of my undergraduate programming class where I pulled an all-nighter to finish the final project… a full week before it was actually due. So I’ve brushed up on modern languages and libraries and gotten to work on some nonprofit and personal projects.</p>
+          <p>I like getting the details right and figuring out how to make my users’ lives easier. How can I help you?</p>
+        </div>
+      <h2 class="py-4">What I'm Learning Next</h2>
+        <p>Mobile app development in React Native. I promised my father I’d build him a Spider Solitaire app so he doesn’t have to pay $2 for an existing ad-free app...</p>
     </div>
-
-    <div class="card-deck my-4">
-
-      <div class="card px-4 py-4">
-        <a href="https://github.com/snyderc/gofish"><img class="card-img-top" src="images/fish_small_openclipart.png" alt="Card image cap"></a>
-        <div class="card-block py-4">
-          <h4 class="card-title"><a href="https://github.com/snyderc/gofish">Go Fish</a></h4>
-          <p class="card-text">Python command line program to play Go Fish between two human players at the same computer.</p>
-          <p><a href="https://github.com/snyderc/gofish">GitHub</a></p>
-        </div>
-      </div>
-
-      <div class="card px-4 py-4">
-        <a href="http://conway.snyderc.me"><img class="card-img-top" src="images/conway_game_of_life.png" alt="Conway's Game of Life screenshot"></a>
-        <div class="card-block py-4">
-          <h4 class="card-title"><a href="http://conway.snyderc.me">Conway's Game of Life</a></h4>
-          <p class="card-text">ReactJS app that runs the classic cellular automaton.</p>
-          <p><a href="https://github.com/snyderc/conway-game-of-life">GitHub</a> | <a href="http://conway.snyderc.me/">Live Demo</a></a></p>
-        </div>
-      </div>
-
+    <div class="col-sm-2"></div>
     </div>
   </div>
 
-  <div class="container py-4 text-center" id="about">
-    <h2>About Me</h2>
-      <div class="bio">
-        <p>&nbsp;</p>
-        <p>In high school, my website was #1 on Google (for the admittedly noncompetitive keyword “miniature golf in CT”) with a few hundred unique visitors each summer day, and I was making my own simple TI-83 graphing calculator programs.</p>
-        <p>Not realizing that programming could be a career choice, I instead studied politics, learning enough to know I didn’t want to go into politics! So for the past few years, I’ve edited two books about product creation for startups, moved 20 people and 4 vacuum chambers across town, and run logistics for events keynoted by big-name Boston-area tech founders.</p>
-        <p>And along the way, I created a database to automate colleagues’ expense reporting, modified a web scraper so that I could customize how a third-party program displayed its data, and learned how to get an admin account on a WordPress site via MySQL commands. No matter where I went, I saw the power of tech.</p>
-        <p>But I never forgot the excitement of my undergraduate programming class where I pulled an all-nighter to finish the final project… a full week before it was actually due. So I’ve brushed up on modern languages and libraries and gotten to work on some nonprofit and personal projects.</p>
-        <p>I like getting the details right and figuring out how to make my users’ lives easier. How can I help you?</p>
-        <p>&nbsp;</p>
-      </div>
-    <h2>What I'm Learning Next:</h2>
-      <p>Mobile app development in React Native. I promised my father I’d build him a Spider Solitaire app so he doesn’t have to pay $2 for an existing ad-free app...</p>
-  </div>
-
-  <div class="container py-4 text-center" id="contact">
-    <h2>Contact</h2>
-    <a class="btn" href="mailto:hello@snyderc.me"><i class="fa fa-envelope"></i></a>
-    <a class="btn" href="http://www.github.com/snyderc"><i class="fa fa-github"></i></a>
+  <div class="container px-0 py-4 text-center" id="contact">
+    <div class="contact-container">
+        <h2 class="py-4">Contact</h2>
+        <div>
+          <a class="btn px-4" href="mailto:hello@snyderc.me"><i class="fa fa-envelope"></i></a>
+          <a class="btn px-4" href="http://www.github.com/snyderc"><i class="fa fa-github"></i></a>
+          <a class="btn px-4" href="https://www.linkedin.com/in/christopher-snyder-09362126/"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
   </div>
 
   <footer class="footer py-4">
     <div class="container">
-      <p class="text-center"><i class="fa fa-bicycle" aria-hidden="true"></i></p>
+      <p class="text-center"><a class="bicycle" href="/bicycle.html"><i class="fa fa-bicycle" aria-hidden="true"></a></i></p>
     </div>
   </footer>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
-  <script src='https://use.fontawesome.com/2738f8ae5c.js'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+  <script src='//use.fontawesome.com/2738f8ae5c.js'></script>
 
-  <script  src="js/index.js"></script>
+  <script  src="/js/index.js"></script>
 
 </body>
 

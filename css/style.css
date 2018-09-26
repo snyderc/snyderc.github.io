@@ -4,7 +4,6 @@ body {
 
 #about {
   background-color:#EEEEEE;
-  padding: 0 20%;
 }
 
 #portfolio {
@@ -13,14 +12,42 @@ body {
 
 #contact {
   background-color:#DDDDDD;
+  min-height: 100vh;
+  background-image: url('/images/harborislands_csnyder.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 #contact a {
   font-size: 5em;
+  color: white;
+  transition: color 2s;
 }
-
+#contact a:hover {
+  color: rgb(21, 255, 0);
+  font-size: 4.5em;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
 
 .footer {
   background-color:#AAAAAA;
   color:#EEEEEE;
+}
+
+a.bicycle {
+  text-decoration: none;
+  color: inherit;
+}
+a.bicycle:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
 }
