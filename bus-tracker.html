@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="30">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: darkgreen;
+        }
+        .main-container {
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            padding: 2vh;
+            text-align: center;
+            background-color: white;
+        }
+        .title {
+            font-size: 8vh;
+        }
+        .subheading {
+            font-size:3vh;
+        }
+        .prediction {
+            font-size: 5vh;
+        }
+    </style>
+
+    <title>MBTA Tracker</title>
+  </head>
+  <body>
+    <div class="container main-container">
+        <h1 class="title">Green Line C: Hawes St</h1>
+        <p class="subheading" id="date-updated"></p>
+        <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header subheading">
+                        Toward Cleveland Circle
+                    </div>
+                    <ul class="list-group list-group-flush prediction" id="toward-cleveland-circle">
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header subheading">
+                        Toward Boston
+                    </div>
+                    <ul class="list-group list-group-flush prediction" id="toward-boston">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        function parseResult(response) {
+            let listItems = [];
+            response.data.forEach(prediction => {
+                let prediction_parsed = Date.parse(prediction.attributes.arrival_time);
+                let now = Date.now();
+                let diff = prediction_parsed - now;
+                let minutes = Math.floor(diff / 1000 / 60);
+                let minutesText = minutes <= 1 ? "Arriving" : `${minutes} minutes`;
+                listItems.push(`<li class="list-group-item">${minutesText}</li>`);
+            });
+            return listItems.slice(0,4).join("");
+        };
+        function setLastUpdated() {
+            let now = new Date(Date.now());
+            let nowString = now.toLocaleTimeString();
+            document.getElementById("date-updated").innerHTML = `Updates every 30 seconds | Last updated ${nowString}`;
+        }
+        function setClevelandCirclePredictions() {
+            fetch("https://api-v3.mbta.com/predictions?filter%5Bstop%5D=70213")
+                .then(response => response.json())
+                .then(response => {
+                    document.getElementById("toward-cleveland-circle").innerHTML = parseResult(response);
+                });
+        }
+        function setBostonPredictions() {
+            fetch("https://api-v3.mbta.com/predictions?filter%5Bstop%5D=70214")
+                .then(response => response.json())
+                .then(response => {
+                    document.getElementById("toward-boston").innerHTML = parseResult(response);
+                });
+        }
+        setLastUpdated();
+        setClevelandCirclePredictions();
+        setBostonPredictions();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
