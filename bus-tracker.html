@@ -72,7 +72,7 @@
                 let minutesText = minutes <= 1 ? "Arriving" : `${minutes} minutes`;
                 listItems.push(`<li class="list-group-item">${minutesText}</li>`);
             });
-            return listItems.slice(0,4).join("");
+            return listItems.slice(0,3).join("");
         };
         function setLastUpdated() {
             let now = new Date(Date.now());
