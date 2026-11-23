@@ -54,8 +54,8 @@ function onKeypress(event, keypressStack, compareStack) {
         if (userKeypress === 'Enter') {
             // Clear the keypress stack
             keypressStack.length = 0;
-            // Redirect to the Geocities-izer
-            window.location = "http://www.wonder-tonic.com/geocitiesizer/content.php?theme=2&music=0&url=www.snyderc.me";
+            // Website URL to redirect to
+            window.location = "https://www.snyderc.me/bicycle.html";
         }
     }
     // If user's keypress doesn't match, clear keypressStack
